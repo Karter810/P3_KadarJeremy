@@ -97,6 +97,7 @@ main .city{
     background: lightgray;
     text-align: center;
     padding: 0.5rem;
+    padding-left: 164px;
 }
 /*Explorer*/
 .explorer{
@@ -262,7 +263,7 @@ i{
     border-radius: 0.125rem;
     position: relative;
     top: -11.3rem;
-    right: -12.25rem;
+    right: -63%;
     border: 1px white solid;
 }
 .blocDetails{
@@ -333,6 +334,27 @@ footer a{
     color: white;
 }
 /*media*/
+@media screen  and (max-width: 1230px ) {
+    .contenaireFonctionnement{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    section .classFonctionnement{
+        margin-bottom: 20px;
+    }
+    .contenaireRestaurant{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .nouveau{
+        right: -84%;
+    }
+    .contenairIcons{
+        width: 16%;
+    }
+}
 @media screen  and (max-width: 600px ) {
     .contenaireFonctionnement {
         display: flex;
@@ -346,5 +368,11 @@ footer a{
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    .nouveau{
+        left: 67%;
+    }
+    .contenairIcons{
+        left: -17%;
     }
 }
