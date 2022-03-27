@@ -90,34 +90,49 @@ img{
     margin: 1rem;
 }
 .contenairIcons{
-    position: relative;
-    width: 7%;
-    display: flex;
-    align-items: center;
+    margin-bottom: 70px;
 }
-.icone1{
+.contenairIcons .fa-regular{
     position: absolute;
-    width: 50px;
+    font-size: 50px;
     height: auto;
-  }
-  .icone2{
+    opacity: 1;
+}
+.contenairIcons:hover .fa-regular {
+    animation-name: fondu-in-down;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+}
+.contenairIcons .fa-solid, .fas {
     position: absolute;
-    width: 50px;
+    font-size: 50px;
     height: auto;
+    color: transparent;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA ), to(#9356DC));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     opacity: 0;
-  }
-  .icone2:hover {
+}
+.contenairIcons:hover .fa-solid {
     animation-name: fondu-in-up;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
-    animation-duration: 1.50s;
+    animation-duration: 1.5s;
     animation-direction: alternate;
 }
-  @keyframes fondu-in-up {
+@keyframes fondu-in-up {
     0%    { opacity:0; }
     25%   { opacity:0; }
     75%   { opacity:1; }
     100%  { opacity:1; }
+}
+@keyframes fondu-in-down {
+    0%    { opacity:1; }
+    25%   { opacity:1; }
+    75%   { opacity:0; }
+    100%  { opacity:0; }
 }
 .menu{
     display: grid;
@@ -182,7 +197,7 @@ main h3::after{
     }
 }
 .blocDetailMenu header{
-    padding: 0.75rem;
+    padding-left: 0.75rem;
     overflow: hidden;
     white-space: nowrap;
 }

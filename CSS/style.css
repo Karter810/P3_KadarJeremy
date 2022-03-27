@@ -189,7 +189,7 @@ i{
     background-color:#9356DC;
     color:white;
     padding: 0.5rem;
-    border-radius: 50%;
+    border-radius: 44%;
 }
 ::marker{
     text-decoration: none;
@@ -287,29 +287,50 @@ i{
     display: flex;
     align-items: center;
 }
-.icone1{
+.contenairIcons .fa-regular{
     position: absolute;
-    width: 50px;
+    font-size: 50px;
     height: auto;
-  }
-  .icone2{
-    position: absolute;
-    width: 50px;
-    height: auto;
-    opacity: 0;
-  }
-  .icone2:hover {
+    opacity: 1;
+}
+.contenairIcons:hover .fa-regular {
+    animation-name: fondu-in-down;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+}
+.contenairIcons .fa-solid, .fas {
+        position: absolute;
+        font-size: 50px;
+        height: auto;
+        color: transparent;
+        background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA ), to(#9356DC));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+    }
+.contenairIcons:hover .fa-solid {
     animation-name: fondu-in-up;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     animation-duration: 1.5s;
     animation-direction: alternate;
 }
-  @keyframes fondu-in-up {
+.contenairIcons i {
+    padding: 135%;
+}
+@keyframes fondu-in-up {
     0%    { opacity:0; }
     25%   { opacity:0; }
     75%   { opacity:1; }
     100%  { opacity:1; }
+}
+@keyframes fondu-in-down {
+    0%    { opacity:1; }
+    25%   { opacity:1; }
+    75%   { opacity:0; }
+    100%  { opacity:0; }
 }
 /*footer*/
 footer{
@@ -339,6 +360,8 @@ footer a{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        margin-left: 13%;
     }
     section .classFonctionnement{
         margin-bottom: 20px;
@@ -352,7 +375,7 @@ footer a{
         right: -84%;
     }
     .contenairIcons{
-        width: 16%;
+        width: 0%;
     }
 }
 @media screen  and (max-width: 600px ) {
@@ -360,6 +383,8 @@ footer a{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        margin-left: 13%;
     }
     section .classFonctionnement{
         margin-bottom: 15px;
@@ -373,6 +398,6 @@ footer a{
         left: 67%;
     }
     .contenairIcons{
-        left: -17%;
+        left: 0%;
     }
 }
